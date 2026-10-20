@@ -154,7 +154,7 @@ const d=Object.fromEntries(new FormData(f)),b=f.querySelector("button");msg.styl
 if(!d.name.trim()||d.phone.replace(/\D/g,"").length<10){msg.textContent="Please add your name and a valid phone number.";return}
 if(d._honey)return;
 b.disabled=true;msg.textContent="Sending…";
-try{const r=await fetch("https://formsubmit.co/ajax/jovaxu",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(d)});
+try{const r=await fetch("https://formsubmit.co/ajax/ar.suchethkumarcs@gmail.com",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(d)});
 const j=await r.json().catch(()=>({}));
 if(r.ok&&String(j.success)==="true"){msg.textContent="Thank you. Your enquiry has been sent. We will get in touch shortly.";dl("generate_lead",{type:d.type});f.reset()}
 else msg.textContent="Not sent: "+(j.message||("error "+r.status))+" Please try again, or email ar.suchethkumarcs@gmail.com."}
